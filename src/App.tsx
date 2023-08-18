@@ -11,7 +11,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import { musicalNote , playCircle , settings } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -35,6 +35,10 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+
+
+
+
 setupIonicReact();
 
 const App: React.FC = () => (
@@ -42,31 +46,31 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/tab1">
+          <Route exact path="/library">
             <Tab1 />
           </Route>
-          <Route exact path="/tab2">
+          <Route exact path="/videos">
             <Tab2 />
           </Route>
-          <Route path="/tab3">
+          <Route path="/settings">
             <Tab3 />
           </Route>
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/library" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+          <IonTabButton tab="library" href="/library">
+            <IonIcon aria-hidden="true" icon={musicalNote} />
+            <IonLabel>library</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon aria-hidden="true" icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+          <IonTabButton tab="videos" href="/videos">
+            <IonIcon aria-hidden="true" icon={playCircle} />
+            <IonLabel>video</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+          <IonTabButton tab="settings" href="/settings">
+            <IonIcon aria-hidden="true" icon={settings} />
+            <IonLabel>settings</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
