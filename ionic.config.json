@@ -1,0 +1,7 @@
+{
+  "name": "Zen Player",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
